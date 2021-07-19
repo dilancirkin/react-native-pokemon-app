@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import {StyleSheet, View,Text,FlatList,Image,TouchableOpacity} from 'react-native';
+import {StyleSheet, View,Text,FlatList,TouchableOpacity, Image} from 'react-native';
 import axios from 'axios';
-import {createStackNavigator} from '@react-navigation/stack';
-import {NavigationContainer} from '@react-navigation/native';
+import styles from "./PokemonList.style.js"
+
 
 class PokemonList extends Component{//extend ile react componentinin tüm özelliklerini aktardık 
     constructor(props){
@@ -28,9 +28,10 @@ class PokemonList extends Component{//extend ile react componentinin tüm özell
              console.log('item',item);
              return(
                 <View
-                style={{backgroundColor:'gray',width:'50%',height:70}}>
+                style={styles.cardStyle}>
                <Text>{item.name}</Text>
-               <Image source={require('')} style={{width:50,height:50,resizeMode:'contain'}}/>
+                <Image source={require("../../assets/pokemon.png")} 
+                    style={styles.pokemonImageStyle}></Image>
             
                 </View>
              );
