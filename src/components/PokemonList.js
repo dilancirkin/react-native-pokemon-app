@@ -25,15 +25,17 @@ class PokemonList extends Component{//extend ile react componentinin tüm özell
          }
 
          renderItem= ({item})=>{
-             console.log('item',item);
              const{navigate}=this.props.navigation;
              return(
                 <View
                 style={styles.cardStyle}>
                <Text style={styles.textStyle}>{item.name}</Text>
                <TouchableOpacity onPress={() => navigate('PokemonDetailScreen',{pokemon:item})}>
-               <Image source={require("../../assets/pokemon.png")} 
+               <View style={styles.cardBackgroundStyle}>
+              <Image source={require("../../assets/pokemon.png")} 
                     style={styles.pokemonImageStyle}></Image>
+          </View>
+              
 
                </TouchableOpacity>
             
@@ -51,7 +53,6 @@ class PokemonList extends Component{//extend ile react componentinin tüm özell
                  data={this.state.pokemonList}
                  renderItem={this.renderItem}
                  />
-               
              </View>
          );
      }
