@@ -8,10 +8,6 @@ import PokemonList from '../components/PokemonList';
 function PokemonScreen({ navigation }) {
     return (
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Button
-          title="Go to Details"
-          onPress={() => navigation.navigate('PokemonDetailScreen')}
-        />
        <PokemonList navigation={navigation}/>
       </View>
     );

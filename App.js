@@ -12,7 +12,7 @@ function App(){
   return( 
     <NavigationContainer>
       <Stack.Navigator>
-      <Stack.Screen name="PokemonScreen" component={PokemonScreen} />
+      <Stack.Screen name="POKEMON" component={PokemonScreen} />
       <Stack.Screen name="PokemonDetailScreen" component={PokemonDetailScreen} />
     </Stack.Navigator>
     </NavigationContainer>
