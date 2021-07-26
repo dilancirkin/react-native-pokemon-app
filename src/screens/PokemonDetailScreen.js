@@ -16,9 +16,9 @@ useEffect(()=>{
     return(
         <View>
             <Image source={require("../../assets/pokemon.png")} style={styles.pokeImageStyle}></Image>
-            <Text style={styles.baseText}>{'Base experience:'}<Text style={styles.innerText}>{pokemonDetailData && pokemonDetailData.base_experience}</Text></Text>
-            <Text style={styles.baseText}>{'Version Name:'}<Text style={styles.innerText}>{pokemonDetailData && pokemonDetailData.game_indices[0].version.name}</Text></Text>
-            <Text style={styles.baseText}>{'Ability Name:\n'}<Text style={styles.innerText}>{pokemonDetailData && pokemonDetailData.abilities[0].ability.name}</Text></Text>
+            <Text style={styles.baseText}>{'Base experience\n'}<Text style={styles.innerText}>{pokemonDetailData && pokemonDetailData.base_experience}</Text></Text>
+            <Text style={styles.baseText}>{'Version Name\n'}<Text style={styles.innerText}>{pokemonDetailData && pokemonDetailData.game_indices[0].version.name}</Text></Text>
+            <Text style={styles.baseText}>{'Ability Name\n'}<Text style={styles.innerText}>{pokemonDetailData && pokemonDetailData.abilities[0].ability.name}</Text></Text>
         </View>
     );
 

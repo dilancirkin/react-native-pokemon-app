@@ -7,7 +7,7 @@ export default StyleSheet.create({
         fontWeight:"500",
         textTransform:"uppercase",
         textAlign: "center",
-        margin: 5,
+        margin: 4,
         padding: 10,
       },
       innerText: {
