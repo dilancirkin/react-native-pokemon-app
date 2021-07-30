@@ -30,7 +30,9 @@ class PokemonList extends Component {
             const item = {
               name: data.data.species.name,
               image: data.data.sprites.front_default,
-              url: element.url,
+              baseExperience: data.data.base_experience,
+              versionName: data.data.game_indices[0].version.name,
+              abilityName: data.data.abilities[0].ability.name,
             };
             newData.push(item);
           });
