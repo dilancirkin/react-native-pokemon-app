@@ -35,8 +35,7 @@ class PokemonList extends Component {
             newData.push(item);
           });
         }
-
-        this.setState({pokemonList: newData}, () => {});
+        this.setState({pokemonList: newData});
       })
 
       .catch(error => {
@@ -46,8 +45,6 @@ class PokemonList extends Component {
 
   renderItem = data => {
     const {navigate} = this.props.navigation;
-
-    console.log('ab', data);
     return (
       <View style={styles.cardStyle}>
         <Text style={styles.textStyle}>{data.name}</Text>
