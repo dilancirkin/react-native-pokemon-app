@@ -11,7 +11,6 @@ import axios from 'axios';
 import styles from './PokemonList.style.js';
 
 class PokemonList extends Component {
-  //extend ile react componentinin tüm özelliklerini aktardık
   constructor(props) {
     super(props);
     this.state = {
@@ -28,7 +27,6 @@ class PokemonList extends Component {
         for (let index = 0; index < data.data.results.length; index++) {
           const element = data.data.results[index];
           await axios.get(element.url).then(data => {
-            console.log(element.url);
             const item = {
               name: data.data.species.name,
               image: data.data.sprites.front_default,
@@ -37,10 +35,8 @@ class PokemonList extends Component {
             newData.push(item);
           });
         }
-        console.log(newData);
-        this.setState({pokemonList: newData}, () => {
-          console.log('ee: ', this.state.pokemonList);
-        });
+
+        this.setState({pokemonList: newData}, () => {});
       })
 
       .catch(error => {
